@@ -1,5 +1,6 @@
 'use strict';
 
-function recordBtnClick(innerHTML) {
-  console.log(`${innerHTML}`);
+function recordBtnClick(innerHTML, btnID) {
+  let btnModalText = document.querySelector(`#${btnID}-modal-text`);
+  btnModalText.style.display = 'inline';
 }

@@ -10,15 +10,13 @@ h1 {
   margin: 0 2.5vw;
 }
 
+.modal-text {
+  display: none;
+}
+
 @media only screen and (max-width: 300px) {
   .modal-btn {
     display: block;
     margin: 2.5vw auto;
   }
-}
-
-#modal-text-1,
-#modal-text-2,
-#modal-text-3 {
-  display: none;
 }
