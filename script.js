@@ -7,7 +7,7 @@ function recordBtnClick(innerHTML, btnID) {
   let btnModalText = document.querySelector(`#${btnID}-modal-text`);
   btnModalText.style.display = 'inline';
   for (let i = 0; i < buttons.length; i++) {
-    buttons[i].style.display = 'none';
+    buttons[i].disabled = true;
   }
   modalBtnContainer.style.filter = 'blur(2px)';
 }
@@ -16,7 +16,7 @@ function closeModalWindow(parentID) {
   let btnModalText = document.querySelector(`#${parentID}`);
   btnModalText.style.display = 'none';
   for (let i = 0; i < buttons.length; i++) {
-    buttons[i].style.display = 'inline';
+    buttons[i].disabled = false;
   }
   modalBtnContainer.style.filter = 'none';
 }
