@@ -10,8 +10,21 @@ h1 {
   margin: 0 2.5vw;
 }
 
+.modal-text-container {
+  background-color: lightgray;
+}
+
 .modal-text {
   display: none;
+}
+
+.modal-text > button,
+.modal-text > h2 {
+  display: inline;
+}
+
+.close-modal {
+  float: right;
 }
 
 @media only screen and (max-width: 300px) {
