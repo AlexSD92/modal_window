@@ -1,9 +1,21 @@
+body {
+  background-color: #f2e9e4;
+}
+
 h1 {
   text-align: center;
 }
 
+h1,
+h2,
+p,
+button {
+  color: #22223b;
+}
+
 .modal-btn-container {
   text-align: center;
+  margin: 0 0 10vw 0;
 }
 
 .modal-btn {
@@ -11,7 +23,10 @@ h1 {
 }
 
 .modal-text-container {
-  background-color: lightgray;
+  background-color: #c9ada7;
+  display: none;
+  padding: 2.5vw;
+  border-radius: 10px;
 }
 
 .modal-text {
