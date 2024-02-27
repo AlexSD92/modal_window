@@ -15,7 +15,7 @@ button {
 
 .modal-btn-container {
   text-align: center;
-  margin: 0 0 10vw 0;
+  margin: 0 0 7.5vw 0;
 }
 
 .modal-btn {
@@ -27,6 +27,7 @@ button {
   display: none;
   padding: 2.5vw;
   border-radius: 10px;
+  margin: 0 20%;
 }
 
 .modal-text {
