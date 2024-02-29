@@ -3,11 +3,11 @@
 const buttons = document.querySelectorAll('.modal-btn');
 const modalBtnContainer = document.querySelector('.modal-btn-container');
 const modalTextContainer = document.querySelector('.modal-text-container');
+let btnModalText;
 
-function recordBtnClick(innerHTML, btnID) {
-  let btnModalText = document.querySelector(`#${btnID}-modal-text`);
-  modalTextContainer.style.display = 'block';
-  btnModalText.style.display = 'inline';
+function recordBtnClick(btnID) {
+  btnModalText = document.querySelector(`#${btnID}-modal-text`);
+  btnModalText.classList.remove('hidden');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].disabled = true;
   }
@@ -15,11 +15,17 @@ function recordBtnClick(innerHTML, btnID) {
 }
 
 function closeModalWindow(parentID) {
-  let btnModalText = document.querySelector(`#${parentID}`);
-  modalTextContainer.style.display = 'none';
-  btnModalText.style.display = 'none';
+  btnModalText = document.querySelector(`#${parentID}`);
+  btnModalText.classList.add('hidden');
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].disabled = false;
   }
   modalBtnContainer.style.filter = 'none';
 }
+
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+  if (key === 'Escape') {
+    closeModalWindow(btnModalText.id);
+  }
+});
